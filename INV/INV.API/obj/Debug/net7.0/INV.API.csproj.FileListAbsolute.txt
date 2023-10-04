@@ -12,6 +12,12 @@ E:\Personal\INV\INV.API\bin\Debug\net7.0\Microsoft.OpenApi.dll
 E:\Personal\INV\INV.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\Personal\INV\INV.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\Personal\INV\INV.API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Personal\INV\INV.API\bin\Debug\net7.0\INV.Application.dll
+E:\Personal\INV\INV.API\bin\Debug\net7.0\INV.Domain.dll
+E:\Personal\INV\INV.API\bin\Debug\net7.0\INV.Infrastructure.dll
+E:\Personal\INV\INV.API\bin\Debug\net7.0\INV.Application.pdb
+E:\Personal\INV\INV.API\bin\Debug\net7.0\INV.Domain.pdb
+E:\Personal\INV\INV.API\bin\Debug\net7.0\INV.Infrastructure.pdb
 E:\Personal\INV\INV.API\obj\Debug\net7.0\INV.API.csproj.AssemblyReference.cache
 E:\Personal\INV\INV.API\obj\Debug\net7.0\INV.API.GeneratedMSBuildEditorConfig.editorconfig
 E:\Personal\INV\INV.API\obj\Debug\net7.0\INV.API.AssemblyInfoInputs.cache

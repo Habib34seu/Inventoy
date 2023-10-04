@@ -303,6 +303,47 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "INV.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "INV.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.11"
+        },
+        "compile": {
+          "bin/placeholder/INV.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/INV.Application.dll": {}
+        }
+      },
+      "INV.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.11"
+        },
+        "compile": {
+          "bin/placeholder/INV.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/INV.Domain.dll": {}
+        }
+      },
+      "INV.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "INV.Application": "1.0.0",
+          "INV.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/INV.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/INV.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -957,10 +998,28 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "INV.Application/1.0.0": {
+      "type": "project",
+      "path": "../INV.Application/INV.Application.csproj",
+      "msbuildProject": "../INV.Application/INV.Application.csproj"
+    },
+    "INV.Domain/1.0.0": {
+      "type": "project",
+      "path": "../INV.Domain/INV.Domain.csproj",
+      "msbuildProject": "../INV.Domain/INV.Domain.csproj"
+    },
+    "INV.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../INV.Infrastructure/INV.Infrastructure.csproj",
+      "msbuildProject": "../INV.Infrastructure/INV.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "INV.Application >= 1.0.0",
+      "INV.Domain >= 1.0.0",
+      "INV.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
       "Microsoft.EntityFrameworkCore >= 7.0.11",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -993,7 +1052,17 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Personal\\INV\\INV.Application\\INV.Application.csproj": {
+              "projectPath": "E:\\Personal\\INV\\INV.Application\\INV.Application.csproj"
+            },
+            "E:\\Personal\\INV\\INV.Domain\\INV.Domain.csproj": {
+              "projectPath": "E:\\Personal\\INV\\INV.Domain\\INV.Domain.csproj"
+            },
+            "E:\\Personal\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj": {
+              "projectPath": "E:\\Personal\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -8,6 +8,9 @@
     ".NETCoreApp,Version=v7.0": {
       "INV.API/1.0.0": {
         "dependencies": {
+          "INV.Application": "1.0.0",
+          "INV.Domain": "1.0.0",
+          "INV.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.5",
           "Microsoft.EntityFrameworkCore": "7.0.11",
           "Swashbuckle.AspNetCore": "6.4.0"
@@ -132,6 +135,32 @@
             "assemblyVersion": "6.4.0.0",
             "fileVersion": "6.4.0.0"
           }
+        }
+      },
+      "INV.Application/1.0.0": {
+        "dependencies": {
+          "INV.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.11"
+        },
+        "runtime": {
+          "INV.Application.dll": {}
+        }
+      },
+      "INV.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.11"
+        },
+        "runtime": {
+          "INV.Domain.dll": {}
+        }
+      },
+      "INV.Infrastructure/1.0.0": {
+        "dependencies": {
+          "INV.Application": "1.0.0",
+          "INV.Domain": "1.0.0"
+        },
+        "runtime": {
+          "INV.Infrastructure.dll": {}
         }
       }
     }
@@ -267,6 +296,21 @@
       "sha512": "sha512-1Hh3atb3pi8c+v7n4/3N80Jj8RvLOXgWxzix6w3OZhB7zBGRwsy7FWr4e3hwgPweSBpwfElqj4V4nkjYabH9nQ==",
       "path": "swashbuckle.aspnetcore.swaggerui/6.4.0",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+    },
+    "INV.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "INV.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "INV.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
