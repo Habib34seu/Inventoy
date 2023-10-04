@@ -1,0 +1,12 @@
+E:\Personal\INV\INV.Domain\bin\Debug\net7.0\INV.Domain.deps.json
+E:\Personal\INV\INV.Domain\bin\Debug\net7.0\INV.Domain.dll
+E:\Personal\INV\INV.Domain\bin\Debug\net7.0\INV.Domain.pdb
+E:\Personal\INV\INV.Domain\obj\Debug\net7.0\INV.Domain.csproj.AssemblyReference.cache
+E:\Personal\INV\INV.Domain\obj\Debug\net7.0\INV.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Personal\INV\INV.Domain\obj\Debug\net7.0\INV.Domain.AssemblyInfoInputs.cache
+E:\Personal\INV\INV.Domain\obj\Debug\net7.0\INV.Domain.AssemblyInfo.cs
+E:\Personal\INV\INV.Domain\obj\Debug\net7.0\INV.Domain.csproj.CoreCompileInputs.cache
+E:\Personal\INV\INV.Domain\obj\Debug\net7.0\INV.Domain.dll
+E:\Personal\INV\INV.Domain\obj\Debug\net7.0\refint\INV.Domain.dll
+E:\Personal\INV\INV.Domain\obj\Debug\net7.0\INV.Domain.pdb
+E:\Personal\INV\INV.Domain\obj\Debug\net7.0\ref\INV.Domain.dll
