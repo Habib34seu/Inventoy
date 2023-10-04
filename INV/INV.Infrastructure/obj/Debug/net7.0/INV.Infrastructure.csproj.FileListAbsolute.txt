@@ -15,3 +15,5 @@ E:\Personal\INV\INV.Infrastructure\obj\Debug\net7.0\INV.Infrastructure.dll
 E:\Personal\INV\INV.Infrastructure\obj\Debug\net7.0\refint\INV.Infrastructure.dll
 E:\Personal\INV\INV.Infrastructure\obj\Debug\net7.0\INV.Infrastructure.pdb
 E:\Personal\INV\INV.Infrastructure\obj\Debug\net7.0\ref\INV.Infrastructure.dll
+E:\Personal\INV\INV.Infrastructure\bin\Debug\net7.0\INV.Infrastructure.runtimeconfig.json
+E:\Personal\INV\INV.Infrastructure\obj\Debug\net7.0\INV.Infrastructure.genruntimeconfig.cache
