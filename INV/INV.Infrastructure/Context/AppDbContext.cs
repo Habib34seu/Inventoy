@@ -12,10 +12,10 @@ namespace INV.Infrastructure.Context
         }
 
         #region Inventory Basic Data
-        public DbSet<CategoryEntity> Categories { get; set; }
-        public DbSet<SubCategoryEntity> SubCategories { get; set; }
-        public DbSet<ProductEntity> Products { get; set; }
-        public DbSet<UOMEntity> Units { get; set; }
+            public DbSet<CategoryEntity> Categories { get; set; }
+            public DbSet<SubCategoryEntity> SubCategories { get; set; }
+            public DbSet<ProductEntity> Products { get; set; }
+            public DbSet<UOMEntity> Units { get; set; }
         #endregion 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
