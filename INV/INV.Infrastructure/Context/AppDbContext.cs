@@ -20,8 +20,11 @@ namespace INV.Infrastructure.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+
+
             #region Inventory Basic Data
-                modelBuilder.Entity<CategoryEntity>(entity =>
+            modelBuilder.Entity<CategoryEntity>(entity =>
                 {
                     entity.ToTable("Categories");
                     entity.HasKey(cat => cat.Id);
