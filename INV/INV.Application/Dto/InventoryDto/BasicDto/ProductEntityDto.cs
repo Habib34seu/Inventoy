@@ -4,6 +4,8 @@ namespace INV.Application.Dto.InventoryDto.BasicDto
     public class ProductEntityDto :BaseEntityDto
     {
         public string ProductName { get; set; }
+        public string ProductCode { get; set; }
+        public string ProductShortName { get; set; }
         public int CategoryId { get; set; }
         public int SubCategoryId { get; set; }
         public int Price { get; set; }
@@ -14,6 +16,8 @@ namespace INV.Application.Dto.InventoryDto.BasicDto
     public class ProductEntityCreateDto 
     {
         public string ProductName { get; set; }
+        public string ProductCode { get; set; }
+        public string ProductShortName { get; set; }
         public int CategoryId { get; set; }
         public int SubCategoryId { get; set; }
         public int Price { get; set; }
@@ -24,6 +28,8 @@ namespace INV.Application.Dto.InventoryDto.BasicDto
     public class ProductEntityUpdateDto : BaseEntityDto
     {
         public string ProductName { get; set; }
+        public string ProductCode { get; set; }
+        public string ProductShortName { get; set; }
         public int CategoryId { get; set; }
         public int SubCategoryId { get; set; }
         public int Price { get; set; }

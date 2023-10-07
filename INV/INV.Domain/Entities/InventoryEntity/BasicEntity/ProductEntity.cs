@@ -7,6 +7,8 @@ namespace INV.Domain.Entities.InventoryEntity.BasicEntity
     public class ProductEntity : BaseEntity
     {
         public string ProductName { get; set; }
+        public string ProductCode { get; set; }
+        public string ProductShortName { get; set; }
 
         [ForeignKey("Categories")]
         public int CategoryId { get; set; }

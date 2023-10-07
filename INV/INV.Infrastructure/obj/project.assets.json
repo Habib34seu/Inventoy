@@ -2924,19 +2924,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\habibur.ba.PAKIZA\\.nuget\\packages\\": {}
+    "C:\\Users\\RYZEN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Personal\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj",
+      "projectUniqueName": "E:\\MyProject\\inv\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj",
       "projectName": "INV.Infrastructure",
-      "projectPath": "E:\\Personal\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\habibur.ba.PAKIZA\\.nuget\\packages\\",
-      "outputPath": "E:\\Personal\\INV\\INV.Infrastructure\\obj\\",
+      "projectPath": "E:\\MyProject\\inv\\INV\\INV.Infrastructure\\INV.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\RYZEN\\.nuget\\packages\\",
+      "outputPath": "E:\\MyProject\\inv\\INV\\INV.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\habibur.ba.PAKIZA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RYZEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2950,11 +2950,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\Personal\\INV\\INV.Application\\INV.Application.csproj": {
-              "projectPath": "E:\\Personal\\INV\\INV.Application\\INV.Application.csproj"
+            "E:\\MyProject\\inv\\INV\\INV.Application\\INV.Application.csproj": {
+              "projectPath": "E:\\MyProject\\inv\\INV\\INV.Application\\INV.Application.csproj"
             },
-            "E:\\Personal\\INV\\INV.Domain\\INV.Domain.csproj": {
-              "projectPath": "E:\\Personal\\INV\\INV.Domain\\INV.Domain.csproj"
+            "E:\\MyProject\\inv\\INV\\INV.Domain\\INV.Domain.csproj": {
+              "projectPath": "E:\\MyProject\\inv\\INV\\INV.Domain\\INV.Domain.csproj"
             }
           }
         }
@@ -3000,7 +3000,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

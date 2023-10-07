@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = INV.Application
-build_property.ProjectDir = E:\Personal\INV\INV.Application\
+build_property.ProjectDir = E:\MyProject\inv\INV\INV.Application\
