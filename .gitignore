@@ -52,3 +52,7 @@
 /INV/INV.API/obj/INV.API.csproj.nuget.dgspec.json
 /INV/INV.API/obj/project.assets.json
 /INV/INV.API/obj/project.nuget.cache
+/INV/INV.Infrastructure/obj/project.assets.json
+/INV/INV.Infrastructure/obj/project.nuget.cache
+/INV/INV.Infrastructure/obj/Debug/net7.0/INV.Infrastructure.assets.cache
+/INV/INV.Infrastructure/obj/INV.Infrastructure.csproj.nuget.dgspec.json
