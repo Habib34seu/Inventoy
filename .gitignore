@@ -56,3 +56,7 @@
 /INV/INV.Infrastructure/obj/project.nuget.cache
 /INV/INV.Infrastructure/obj/Debug/net7.0/INV.Infrastructure.assets.cache
 /INV/INV.Infrastructure/obj/INV.Infrastructure.csproj.nuget.dgspec.json
+*.dll
+/INV/INV.Infrastructure/bin/Debug/net7.0/INV.Infrastructure.deps.json
+/INV/INV.Infrastructure/obj/Debug/net7.0/INV.Infrastructure.csproj.CoreCompileInputs.cache
+/INV/INV.API/bin/Debug/net7.0/INV.API.deps.json
