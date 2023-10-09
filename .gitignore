@@ -43,3 +43,7 @@
 /INV/INV.Infrastructure/obj/Debug/net7.0/INV.Infrastructure.csproj.AssemblyReference.cache
 /INV/INV.Infrastructure/obj/Debug/net7.0/INV.Infrastructure.dll
 /INV/INV.Infrastructure/obj/Debug/net7.0/INV.Infrastructure.pdb
+/INV/INV.Application/obj/Debug/net7.0/INV.Application.assets.cache
+/INV/INV.Application/obj/INV.Application.csproj.nuget.dgspec.json
+/INV/INV.Application/obj/project.assets.json
+/INV/INV.Application/obj/project.nuget.cache
