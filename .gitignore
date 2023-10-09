@@ -60,3 +60,5 @@
 /INV/INV.Infrastructure/bin/Debug/net7.0/INV.Infrastructure.deps.json
 /INV/INV.Infrastructure/obj/Debug/net7.0/INV.Infrastructure.csproj.CoreCompileInputs.cache
 /INV/INV.API/bin/Debug/net7.0/INV.API.deps.json
+/INV/INV.API/obj/Debug/net7.0/INV.API.csproj.CoreCompileInputs.cache
+/INV/INV.API/obj/Debug/net7.0/INV.API.csproj.FileListAbsolute.txt
