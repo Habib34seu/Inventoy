@@ -48,3 +48,7 @@
 /INV/INV.Application/obj/project.assets.json
 /INV/INV.Application/obj/project.nuget.cache
 /INV/.vs/INV/DesignTimeBuild/.dtbcache.v2
+/INV/INV.API/obj/Debug/net7.0/INV.API.assets.cache
+/INV/INV.API/obj/INV.API.csproj.nuget.dgspec.json
+/INV/INV.API/obj/project.assets.json
+/INV/INV.API/obj/project.nuget.cache
