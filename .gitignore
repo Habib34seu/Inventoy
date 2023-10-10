@@ -117,3 +117,5 @@
 /INV/INV.Infrastructure/obj/Debug/net7.0/INV.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 /INV/INV.Infrastructure/obj/Debug/net7.0/INV.Infrastructure.csproj.FileListAbsolute.txt
 /INV/INV.Infrastructure/obj/Debug/net7.0/INV.Infrastructure.csproj.CopyComplete
+*.v2
+*.1
