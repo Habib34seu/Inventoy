@@ -3,9 +3,8 @@ using MediatR;
 
 namespace INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.Requests.Commands
 {
-    public class UpdateUOMCommand : IRequest<int>
+    public class UpdateUOMCommand : IRequest<Unit>
     {
         public UOMEntityUpdateDto UOMEntityUpdateDto { get; set; }
     }
-}
 }
