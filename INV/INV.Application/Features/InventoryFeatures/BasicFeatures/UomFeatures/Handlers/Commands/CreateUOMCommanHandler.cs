@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using INV.Application.Contracts.Repository.InventoryRepository.BasicRepository;
 using INV.Application.Dto.InventoryDto.BasicDto.Validators;
+using INV.Application.Exceptions;
 using INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.Requests.Commands;
 using INV.Domain.Entities.InventoryEntity.BasicEntity;
 using MediatR;
@@ -23,7 +24,7 @@ namespace INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.H
             var validationResult = await validator.ValidateAsync(request.UOMEntityCreateDto);
 
             if (validationResult.IsValid == false)
-                throw new Exception();
+                throw new ValidationException(validationResult); 
 
             var uom = _mapper.Map<UOMEntity>(request.UOMEntityCreateDto);
             uom = await _uOMRepository.Add(uom);

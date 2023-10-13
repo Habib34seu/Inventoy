@@ -1,5 +1,8 @@
 ﻿using AutoMapper;
 using INV.Application.Contracts.Repository.InventoryRepository.BasicRepository;
+using INV.Application.Dto.InventoryDto.BasicDto;
+using INV.Application.Dto.InventoryDto.BasicDto.Validators;
+using INV.Application.Exceptions;
 using INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.Requests.Commands;
 using MediatR;
 
@@ -17,7 +20,17 @@ namespace INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.H
         }
         public async Task<Unit> Handle(DeleteUOMCommand request, CancellationToken cancellationToken)
         {
+            var validator = new UOMEntityDeleteDtoValidator();
+            var validationResult = await validator.ValidateAsync(request.UOMEntityDeleteDto);
+
+            if (validationResult.IsValid == false)
+                throw new ValidationException(validationResult);
+            
             var uom = await _uOMRepository.Get(request.UOMEntityDeleteDto.Id);
+
+            if (uom == null)
+                throw new NotFoundException(nameof(UOMEntityDeleteDto), request.UOMEntityDeleteDto.Id);
+
             _mapper.Map(request.UOMEntityDeleteDto, uom);
             await _uOMRepository.Update(uom);
             return Unit.Value;
