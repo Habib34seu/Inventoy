@@ -4,11 +4,12 @@ using INV.Application.Dto.InventoryDto.BasicDto;
 using INV.Application.Dto.InventoryDto.BasicDto.Validators;
 using INV.Application.Exceptions;
 using INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.Requests.Commands;
+using INV.Application.Response;
 using MediatR;
 
 namespace INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.Handlers.Commands
 {
-    public class DeleteUOMCommandHandler : IRequestHandler<DeleteUOMCommand, Unit>
+    public class DeleteUOMCommandHandler : IRequestHandler<DeleteUOMCommand, BaseCommandResponse>
     {
         private readonly IUOMRepository _uOMRepository;
         private readonly IMapper _mapper;
@@ -18,8 +19,9 @@ namespace INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.H
             _uOMRepository = uOMRepository;
             _mapper = mapper;
         }
-        public async Task<Unit> Handle(DeleteUOMCommand request, CancellationToken cancellationToken)
+        public async Task<BaseCommandResponse> Handle(DeleteUOMCommand request, CancellationToken cancellationToken)
         {
+            var response = new BaseCommandResponse();
             var validator = new UOMEntityDeleteDtoValidator();
             var validationResult = await validator.ValidateAsync(request.UOMEntityDeleteDto);
 
@@ -33,7 +35,11 @@ namespace INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.H
 
             _mapper.Map(request.UOMEntityDeleteDto, uom);
             await _uOMRepository.Update(uom);
-            return Unit.Value;
+
+            response.Success = true;
+            response.Message = "Unit Successfully Delete";
+            response.Id = uom.Id;
+            return response;
         }
     }
 }
