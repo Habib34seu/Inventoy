@@ -51,7 +51,7 @@ namespace INV.Infrastructure.Context
                     entity.HasIndex(p => p.ProductShortName).IsUnique();
                 });
             #endregion
-    }
+        }
 
-}
+    }
 }

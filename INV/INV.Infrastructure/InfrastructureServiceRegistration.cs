@@ -2,6 +2,7 @@
 using INV.Application.Contracts.Repository.InventoryRepository.BasicRepository;
 using INV.Infrastructure.Context;
 using INV.Infrastructure.Repository;
+using INV.Infrastructure.Repository.InvRepository.BasicInvRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,7 +19,7 @@ namespace INV.Infrastructure
                  configuration.GetConnectionString("InvConnectionString")));
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddScoped<IUOMRepository, IUOMRepository>();
+            services.AddScoped<IUOMRepository, UOMRepository>();
 
             return services;
         }
