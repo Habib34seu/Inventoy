@@ -5,18 +5,19 @@ using INV.Application.Dto.InventoryDto.BasicDto.Validators;
 using INV.Application.Exceptions;
 using INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.Requests.Commands;
 using INV.Application.Response;
+using INV.Application.UoW;
 using MediatR;
 
 namespace INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.Handlers.Commands
 {
     public class UpdateUOMCommandHandler : IRequestHandler<UpdateUOMCommand, BaseCommandResponse>
     {
-        private readonly IUOMRepository _uOMRepository;
         private readonly IMapper _mapper;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public UpdateUOMCommandHandler(IUOMRepository uOMRepository, IMapper mapper)
+        public UpdateUOMCommandHandler(IMapper mapper, IUnitOfWork unitOfWork)
         {
-            _uOMRepository = uOMRepository;
+            this._unitOfWork = unitOfWork;
             _mapper = mapper;
         }
         public async Task<BaseCommandResponse> Handle(UpdateUOMCommand request, CancellationToken cancellationToken)
@@ -28,12 +29,13 @@ namespace INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.H
             if (validationResult.IsValid == false)
                 throw new ValidationException(validationResult);
 
-            var uom = await _uOMRepository.Get(request.UOMEntityUpdateDto.Id);
+            var uom = await _unitOfWork.UOMRepository.Get(request.UOMEntityUpdateDto.Id);
             if (uom == null)
                 throw new NotFoundException(nameof(UOMEntityUpdateDto), request.UOMEntityUpdateDto.Id);
 
             _mapper.Map(request.UOMEntityUpdateDto, uom);
-            await _uOMRepository.Update(uom);
+            await _unitOfWork.UOMRepository.Update(uom);
+            await _unitOfWork.Save();
 
             response.Success = true;
             response.Message = "Unit Successfully Saved";

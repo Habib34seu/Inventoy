@@ -5,18 +5,19 @@ using INV.Application.Dto.InventoryDto.BasicDto.Validators;
 using INV.Application.Exceptions;
 using INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.Requests.Commands;
 using INV.Application.Response;
+using INV.Application.UoW;
 using MediatR;
 
 namespace INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.Handlers.Commands
 {
     public class DeleteUOMCommandHandler : IRequestHandler<DeleteUOMCommand, BaseCommandResponse>
     {
-        private readonly IUOMRepository _uOMRepository;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public DeleteUOMCommandHandler(IUOMRepository uOMRepository, IMapper mapper)
+        public DeleteUOMCommandHandler(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _uOMRepository = uOMRepository;
+            this._unitOfWork = unitOfWork;
             _mapper = mapper;
         }
         public async Task<BaseCommandResponse> Handle(DeleteUOMCommand request, CancellationToken cancellationToken)
@@ -28,13 +29,14 @@ namespace INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.H
             if (validationResult.IsValid == false)
                 throw new ValidationException(validationResult);
             
-            var uom = await _uOMRepository.Get(request.UOMEntityDeleteDto.Id);
+            var uom = await _unitOfWork.UOMRepository.Get(request.UOMEntityDeleteDto.Id);
 
             if (uom == null)
                 throw new NotFoundException(nameof(UOMEntityDeleteDto), request.UOMEntityDeleteDto.Id);
 
             _mapper.Map(request.UOMEntityDeleteDto, uom);
-            await _uOMRepository.Update(uom);
+            await _unitOfWork.UOMRepository.Update(uom);
+            await _unitOfWork.Save();
 
             response.Success = true;
             response.Message = "Unit Successfully Delete";

@@ -1,5 +1,6 @@
 ﻿using INV.Application.Contracts;
 using INV.Application.Contracts.Repository.InventoryRepository.BasicRepository;
+using INV.Application.UoW;
 using INV.Infrastructure.Context;
 using INV.Infrastructure.Repository;
 using INV.Infrastructure.Repository.InvRepository.BasicInvRepository;
@@ -19,7 +20,12 @@ namespace INV.Infrastructure
                  configuration.GetConnectionString("InvConnectionString")));
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+
+
             services.AddScoped<IUOMRepository, UOMRepository>();
+           
 
             return services;
         }

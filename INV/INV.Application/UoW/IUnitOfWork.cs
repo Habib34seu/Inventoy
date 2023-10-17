@@ -1,7 +1,10 @@
-﻿namespace INV.Application.UoW
+﻿using INV.Application.Contracts.Repository.InventoryRepository.BasicRepository;
+
+namespace INV.Application.UoW
 {
     public interface IUnitOfWork : IDisposable
     {
-        Task commit();
+        IUOMRepository UOMRepository { get; }
+        Task Save();
     }
 }
