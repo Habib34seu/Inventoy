@@ -1,5 +1,4 @@
-﻿
-using AutoMapper;
+﻿using AutoMapper;
 using INV.Application.Dto.InventoryDto.BasicDto;
 using INV.Application.Features.InventoryFeatures.BasicFeatures.UomFeatures.Requests.Queries;
 using INV.Application.UoW;
