@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace INV.API.Controllers.INV.InvBasic
 {
-    [Route("api/[controller]")]
+    [Route("api/UOM")]
     [ApiController]
     public class UOMController : ControllerBase
     {

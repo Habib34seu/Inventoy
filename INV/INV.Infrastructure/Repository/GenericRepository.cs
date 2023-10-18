@@ -31,6 +31,7 @@ namespace INV.Infrastructure.Repository
             return entity != null;
         }
 
+
         public async Task<T> Get(int id)
         {
             return await _dbContext.Set<T>().FindAsync();
